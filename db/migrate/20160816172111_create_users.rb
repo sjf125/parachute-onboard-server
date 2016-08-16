@@ -15,6 +15,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :phone
       t.string :em_first_name
       t.string :em_last_name
+      t.string :em_relation
       t.string :em_street1
       t.string :em_street2
       t.string :em_city
