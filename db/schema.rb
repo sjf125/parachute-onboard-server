@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816172111) do
+ActiveRecord::Schema.define(version: 20160818180614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20160816172111) do
     t.string   "street2"
     t.string   "city"
     t.string   "state"
-    t.integer  "zip"
-    t.integer  "phone"
+    t.string   "zip"
+    t.string   "phone"
     t.string   "em_first_name"
     t.string   "em_last_name"
     t.string   "em_relation"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20160816172111) do
     t.string   "em_street2"
     t.string   "em_city"
     t.string   "em_state"
-    t.integer  "em_zip"
-    t.integer  "em_phone"
+    t.string   "em_zip"
+    t.string   "em_phone"
     t.datetime "fngrprnt_appt"
     t.string   "maiden_name"
     t.date     "dob"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20160816172111) do
     t.string   "prev_street2"
     t.string   "prev_city"
     t.string   "prev_state"
-    t.integer  "prev_zip"
+    t.string   "prev_zip"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
