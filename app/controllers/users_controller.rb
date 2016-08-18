@@ -48,7 +48,7 @@ class UsersController < ProtectedController
   def submitinfo
     @user = User.find(params[:id])
     if current_user == @user
-      @user.update!(user_params)
+      @user.update!(info_params)
       render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -70,9 +70,9 @@ class UsersController < ProtectedController
 
   private
 
-  def user_params
-    params.require(:user)
-          .permit(:first_name, :mid_name, :last_name, :street1, :street2, :city, :state, :zip, :phone, :em_first_name, :em_last_name, :em_relation, :em_street1, :em_street2, :em_city, :em_state, :em_zip, :em_phone, :fngrprnt_appt, :maiden_name, :dob, :birth_city, :gender, :ht_ft, :ht_in, :eye_color, :license_state, :license_num, :mom_maiden_name, :prev_street1, :prev_street2, :prev_city, :prev_state, :prev_zip)
+  def info_params
+    params.require(:info)
+            .permit(:first_name, :mid_name, :last_name, :street1, :street2, :city, :state, :zip, :phone, :em_first_name, :em_last_name, :em_relation, :em_street1, :em_street2, :em_city, :em_state, :em_zip, :em_phone, :fngrprnt_appt, :maiden_name, :dob, :birth_city, :gender, :ht_ft, :ht_in, :eye_color, :license_state, :license_num, :mom_maiden_name, :prev_street1, :prev_street2, :prev_city, :prev_state, :prev_zip)
   end
 
   def user_creds
